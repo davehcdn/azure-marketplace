@@ -37,7 +37,8 @@
         "name": "[parameters('networkSettings').internalSku]"
       },
       "tags": {
-        "provider": "[toUpper(parameters('elasticTags').provider)]"
+        "provider": "[toUpper(parameters('elasticTags').provider)]",
+        "cstctr": "S0816"
       },
       "properties": {
         "frontendIPConfigurations": [
