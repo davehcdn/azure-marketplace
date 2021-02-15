@@ -1196,7 +1196,7 @@
     },
     "vNetClusterSubnetName": {
       "type": "string",
-      "defaultValue": "MpSCNC3OpsCoreVnet-Elastic-SN",
+      "defaultValue": "MpSCNC3OpsElasticsearch-subnet",
       "metadata": {
         "description": "Subnet name to use for Elasticsearch nodes"
       }
