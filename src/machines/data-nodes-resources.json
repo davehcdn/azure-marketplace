@@ -49,7 +49,8 @@
       "name": "[concat(variables('namespace'), copyindex(), '-av-set')]",
       "location": "[parameters('vm').shared.location]",
       "tags": {
-        "provider": "[toUpper(parameters('elasticTags').provider)]"
+        "provider": "[toUpper(parameters('elasticTags').provider)]",
+        "cstctr": "S0816"
       },
       "copy": {
         "name": "[concat(variables('namespace'),'av-loop')]",
