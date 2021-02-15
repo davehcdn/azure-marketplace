@@ -95,7 +95,8 @@
       "name": "[variables('securityGroupName')]",
       "location": "[parameters('location')]",
       "tags": {
-        "provider": "[toUpper(parameters('elasticTags').provider)]"
+        "provider": "[toUpper(parameters('elasticTags').provider)]",
+        "cstctr": "S0816"
       },
       "properties": {
         "securityRules": [
@@ -136,7 +137,8 @@
       "name": "[variables('nicName')]",
       "location": "[parameters('location')]",
       "tags": {
-        "provider": "[toUpper(parameters('elasticTags').provider)]"
+        "provider": "[toUpper(parameters('elasticTags').provider)]",
+        "cstctr": "S0816"
       },
       "dependsOn": [
         "[concat('Microsoft.Network/networkSecurityGroups/', variables('securityGroupName'))]"
@@ -166,7 +168,8 @@
       "name": "[parameters('namespace')]",
       "location": "[parameters('location')]",
       "tags": {
-        "provider": "[toUpper(parameters('elasticTags').provider)]"
+        "provider": "[toUpper(parameters('elasticTags').provider)]",
+        "cstctr": "S0816"
       },
       "dependsOn": [
         "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
@@ -201,6 +204,10 @@
           "name": "[concat(variables('namespace'), '/script')]",
           "apiVersion": "2019-03-01",
           "location": "[parameters('location')]",
+          "tags": {
+            "provider": "[toUpper(parameters('elasticTags').provider)]",
+            "cstctr": "S0816"
+          },
           "dependsOn": [
             "[concat('Microsoft.Compute/virtualMachines/', parameters('namespace'))]"
           ],
