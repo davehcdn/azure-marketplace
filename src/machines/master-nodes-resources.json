@@ -41,7 +41,8 @@
       "name": "[concat(variables('namespace'), 'av-set')]",
       "location": "[parameters('vm').shared.location]",
       "tags": {
-        "provider": "[toUpper(parameters('elasticTags').provider)]"
+        "provider": "[toUpper(parameters('elasticTags').provider)]",
+        "cstctr": "S0816"
       },
       "properties": {
         "platformUpdateDomainCount": 3,
