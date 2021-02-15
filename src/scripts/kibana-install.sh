@@ -67,7 +67,7 @@ KIBANA_VERSION="6.4.1"
 #Default internal load balancer ip
 ELASTICSEARCH_URL="http://10.0.0.4:9200"
 INSTALL_XPACK=0
-BASIC_SECURITY=0
+BASIC_SECURITY=1
 USER_KIBANA_PWD="changeme"
 SSL_CERT=""
 SSL_KEY=""
@@ -96,7 +96,7 @@ while getopts :n:v:u:S:C:K:P:Y:H:G:V:J:U:lh optname; do
       USER_KIBANA_PWD="${OPTARG}"
       ;;
     l) #install X-Pack
-      INSTALL_XPACK=1
+      INSTALL_XPACK=0
       ;;
     C) #kibana ssl cert
       SSL_CERT="${OPTARG}"
